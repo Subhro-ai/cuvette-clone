@@ -1,0 +1,69 @@
+.container {
+    /* display: flex; */
+    border: solid 1px rgb(229, 229, 229);
+    border-radius: 20px;
+    width: 45em;
+    height: 20em;
+    /* background-color: antiquewhite; */
+    padding: 30px;
+    /* justify-content: space-between; */
+}
+
+.logo {
+    margin-right: 20px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 14px;
+    color: rgb(130, 130, 130);
+}
+
+.share {
+    margin-left: auto;
+}
+
+.skills {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.skill {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.parent {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    text-align: start;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button-div {
+    display: flex;
+    
+}

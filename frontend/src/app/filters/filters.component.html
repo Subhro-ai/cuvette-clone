@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <h1 style="font-weight: 700;">Apply filters</h1>
+    <br>
+    <h1 style="font-weight: 700; color: rgb(117, 117, 117);">Office Type</h1>
+    <div class="radio-btns">
+        <input type="radio" name="Remote" id="Remote1" value="Remote">
+        <label>Remote</label>
+        <input type="radio" name="Remote" id="Remote2" value="Remote">
+        <label>In-Office</label>
+    </div>
+
+    <h1 style="font-weight: 700; color: rgb(117, 117, 117);">Work Experience</h1>
+    <form>
+        <select id="dropdown" name="exp" #drop [(ngModel)]="experience" >
+            <option value="" disabled selected>Select Experience</option>
+          <option value="less">0 - 3 years</option>
+          <option value="more">3+ years</option>
+        </select>
+      </form>
+
+ 
+      <h1 style="font-weight: 700; color: rgb(117, 117, 117);">Min Salary</h1>
+<input id="slider" type=range min=3 max=12 step=3 #slider [(ngModel)]="sliderValue">
+<p> {{sliderValue}} </p>
+<label></label>
+
+<div class="button-div">
+    <button style="margin-left: auto; border: solid 1px gainsboro;" (click)="clear()" >CLEAR</button>
+    <button style="margin-left: 10px; background-color: rgb(41, 99, 248); color: white;" (click)="applyFilter((slider.value), drop.value)" >APPLY</button>
+</div>
+</div>

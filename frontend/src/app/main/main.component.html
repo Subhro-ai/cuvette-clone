@@ -1,0 +1,9 @@
+<!-- Main content area -->
+<main class="flex-1 p-10">
+    <!-- Your main content goes here -->
+    <!-- <h1 class="text-2xl font-semibold">Job Listings</h1> -->
+    <!-- Add your job listing content here -->
+     <div class="cont" *ngFor = "let job of jobs" >
+         <app-jobs [job] = "job"></app-jobs>
+     </div>
+</main>

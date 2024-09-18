@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="title">
+        <img class="logo" src="/user.png" alt="image">
+        <div class="box">
+            <h1 class="header"> {{ job.jobName }} </h1>
+        <h2> {{job.companyName}} | {{job.city}} | {{job.country}} </h2>
+        </div>
+        <img class="share" src="" alt="logo">
+    </div>
+    <div class="skills" *ngFor="let tag of job.tags">
+        <div class="skill">
+            {{tag}}
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="div1">
+            <p style="font-size: 12px; color: rgb(130, 130, 130);">Job Offer</p>
+            <p style="font-size: 14px; font-weight: 700;">₹ {{job.jobOffer[0]/10000}} LPA - {{job.jobOffer[1]/10000}} LPA</p>
+        </div>
+        <div class="div2">
+            <p style="font-size: 12px; color: rgb(130, 130, 130);">Start Date</p>
+            <p style="font-size: 14px; font-weight: 700;"> {{job.start}} </p>
+        </div>
+        <div class="div3">
+            <p style="font-size: 12px; color: rgb(130, 130, 130);">#Openings</p>
+            <p style="font-size: 14px; font-weight: 700;"> {{job.opening}} </p>
+        </div>
+        <div class="div4">
+            <p style="font-size: 12px; color: rgb(130, 130, 130);">Experience</p>
+            <p style="font-size: 14px; font-weight: 700;">{{job.experience}}+ years</p>
+        </div>
+        
+    </div>
+    <div class="button-div">
+        <button style="margin-left: auto; border: solid 1px gainsboro;">View Details</button>
+        <button style="margin-left: 10px; background-color: rgb(41, 99, 248); color: white;">APPLY NOW</button>
+    </div>
+</div>
