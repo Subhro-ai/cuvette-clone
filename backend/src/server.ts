@@ -17,7 +17,7 @@ app.use(cors({
         "https://66ec8d1f322d5d60ba131361--cuvette-clone-subhro.netlify.app"  ]
 }));
 
-app.use("/api/jobs", jobRouter)
+app.use("api/jobs", jobRouter)
 
 app.get("", (req, res) => {
     res.send(sample_jobs);

@@ -18,7 +18,7 @@ app.use((0, cors_1.default)({
         "https://66ec8d1f322d5d60ba131361--cuvette-clone-subhro.netlify.app"
     ]
 }));
-app.use("/api/jobs", jobs_router_1.default);
+app.use("api/jobs", jobs_router_1.default);
 app.get("", function (req, res) {
     res.send(data_1.sample_jobs);
 });
