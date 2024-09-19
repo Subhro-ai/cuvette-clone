@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './filters.component.css'
 })
 export class FiltersComponent {
-  sliderValue: number = 3;
+  sliderValue: number = 0;
   experience:string = '';
   filterTerm = this.experience+'&&'+this.sliderValue;
 
