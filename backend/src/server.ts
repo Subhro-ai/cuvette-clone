@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors({
     credentials:true,
-    origin:["http://localhost:4200"]
+    origin:["https://cuvette-clone.onrender.com/"]
 }));
 
 app.use("/api/jobs", jobRouter)
