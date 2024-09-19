@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5001';
+const BASE_URL = 'https://cuvette-clone.onrender.com/';
 
 export const JOBS_URL = BASE_URL + '/api/jobs';
 export const JOBS_FILTER = JOBS_URL + '/filter/';
