@@ -2,7 +2,7 @@
     "name": "cuvette-clone",
     "version": "1.0.0",
     "engines": {
-        "node": ">=18<23"
+        "node": ">=18"
     },
     "scripts": {
         "start": "cd backend/built && node serve.js",
