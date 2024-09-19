@@ -6,8 +6,8 @@
     },
     "scripts": {
         "start": "cd backend/built && node serve.js",
-        "prebuild": "cd backend && npm run build",
-        "build":"cd frontend && npm run build "
+        "prebuild": "cd backend && npm install && npm run build",
+        "build":"cd frontend && npm install && npm run build "
 
     }
 }
