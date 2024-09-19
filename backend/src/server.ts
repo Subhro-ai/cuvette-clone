@@ -19,11 +19,11 @@ app.use(cors({
 
 app.use("/api/jobs", jobRouter)
 
-app.get("/api/jobs", (req, res) => {
+app.get("", (req, res) => {
     res.send(sample_jobs);
 })
 
-app.get("/api/jobs/search/:searchTerm", (req, res) => {
+app.get("/search/:searchTerm", (req, res) => {
     const searchTerm = req.params.searchTerm;
     const jobs = sample_jobs
     .filter(jobs => jobs.jobName.toLowerCase()
@@ -31,7 +31,7 @@ app.get("/api/jobs/search/:searchTerm", (req, res) => {
     res.send(jobs)
 })
 
-app.get("/api/jobs/filter/:filterTerm", (req, res) => {
+app.get("/filter/:filterTerm", (req, res) => {
     console.log("WORKS");
     const filterTerm = req.params.filterTerm;
     // params.filter.split("&&")[0], Number((params.filter.split("&&")[1])) * 10000
