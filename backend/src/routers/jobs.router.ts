@@ -26,7 +26,7 @@ router.get("/", asyncHandler(
 ))
 
 
-router.get("search/:searchTerm", (req, res) => {
+router.get("/search/:searchTerm", (req, res) => {
     const searchTerm = req.params.searchTerm;
     const jobs = sample_jobs
     .filter(jobs => jobs.jobName.toLowerCase()
@@ -34,7 +34,7 @@ router.get("search/:searchTerm", (req, res) => {
     res.send(jobs)
 })
 
-router.get("filter/:filterTerm", (req, res) => {
+router.get("/filter/:filterTerm", (req, res) => {
     console.log("WORKS");
     const filterTerm = req.params.filterTerm;
     // params.filter.split("&&")[0], Number((params.filter.split("&&")[1])) * 10000

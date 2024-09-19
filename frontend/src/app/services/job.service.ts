@@ -19,13 +19,13 @@ export class JobService {
 
   getAllJobsBySearchTerm(searchTerm:string) {
     // return this.getAll().filter(jobs => jobs.jobName.toLowerCase().includes(searchTerm.toLowerCase()));
-    return this.http.get<Jobs[]>(JOBS_SEARCH + searchTerm);
+    return this.http.get<Jobs[]>('https://cuvette-clone.onrender.com/api/jobs/search/' + searchTerm);
   }
 
 
   
   getAllJobsByFilter(filterTerm:string) : Observable<Jobs[]>{
-    return this.http.get<Jobs[]>(JOBS_FILTER + filterTerm);
+    return this.http.get<Jobs[]>('https://cuvette-clone.onrender.com/api/jobs/filter/'+ filterTerm);
   }
   
 }
