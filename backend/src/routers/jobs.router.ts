@@ -26,13 +26,15 @@ router.get("/", asyncHandler(
 ))
 
 
-router.get("/search/:searchTerm", (req, res) => {
-    const searchTerm = req.params.searchTerm;
-    const jobs = sample_jobs
-    .filter(jobs => jobs.jobName.toLowerCase()
-    .includes(searchTerm.toLowerCase()));
-    res.send(jobs)
-})
+router.get("/search/:searchTerm", asyncHandler(
+    async (req, res) => {
+        const searchTerm = req.params.searchTerm;
+        const jobs = sample_jobs
+        .filter(jobs => jobs.jobName.toLowerCase()
+        .includes(searchTerm.toLowerCase()));
+        res.send(jobs)
+    }
+))
 
 router.get("/filter/:filterTerm", (req, res) => {
     console.log("WORKS");
