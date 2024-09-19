@@ -1,11 +1,30 @@
 import { Router } from "express";
 import { sample_jobs } from "../data";
+import asyncHandler from "express-async-handler";
+import { jobModel } from "../models/job.model";
 const router = Router();
 
 
-router.get("/", (req, res) => {
-    res.send(sample_jobs);
-})
+router.get("/seed", asyncHandler(
+    async (req, res) => {
+        // console.log("SEED");
+        const jobCount = await jobModel.countDocuments();
+        if(jobCount > 0) {
+            res.send("Seed is already done");
+            return;
+        }
+        await jobModel.create(sample_jobs);
+        // res.send(sample_jobs);
+    }
+))
+
+router.get("/", asyncHandler(
+    async (req, res) => {
+        const jobs = await jobModel.find();
+        res.send(jobs);
+    }
+))
+
 
 router.get("/search/:searchTerm", (req, res) => {
     const searchTerm = req.params.searchTerm;
