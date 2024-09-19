@@ -14,7 +14,7 @@ export class JobService {
 
     // http = inject(provideHttpClient);
   getAll(): Observable<Jobs[]> {
-    return this.http.get<Jobs[]>('http://localhost:5001/api/jobs')
+    return this.http.get<Jobs[]>('https://cuvette-clone.onrender.com/api/jobs')
   }
 
   getAllJobsBySearchTerm(searchTerm:string) {
