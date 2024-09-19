@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
     credentials:true,
     origin:["https://cuvette-clone.onrender.com",  // Production URL
-        "http://localhost:4200" ]
+        "https://66ec8d1f322d5d60ba131361--cuvette-clone-subhro.netlify.app/" ]
 }));
 
 app.use("/api/jobs", jobRouter)
