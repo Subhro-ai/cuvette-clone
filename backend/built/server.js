@@ -19,17 +19,17 @@ app.use((0, cors_1.default)({
     ]
 }));
 app.use("/api/jobs", jobs_router_1.default);
-app.get("/api/jobs", function (req, res) {
+app.get("", function (req, res) {
     res.send(data_1.sample_jobs);
 });
-app.get("/api/jobs/search/:searchTerm", function (req, res) {
+app.get("/search/:searchTerm", function (req, res) {
     var searchTerm = req.params.searchTerm;
     var jobs = data_1.sample_jobs
         .filter(function (jobs) { return jobs.jobName.toLowerCase()
         .includes(searchTerm.toLowerCase()); });
     res.send(jobs);
 });
-app.get("/api/jobs/filter/:filterTerm", function (req, res) {
+app.get("/filter/:filterTerm", function (req, res) {
     console.log("WORKS");
     var filterTerm = req.params.filterTerm;
     // params.filter.split("&&")[0], Number((params.filter.split("&&")[1])) * 10000
