@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors({
     credentials:true,
-    origin:[" http://localhost:4200",  // Local development URL
+    origin:[
         "https://66ec8d1f322d5d60ba131361--cuvette-clone-subhro.netlify.app"  ]
 }));
 
