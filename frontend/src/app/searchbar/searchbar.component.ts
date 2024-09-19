@@ -15,7 +15,7 @@ export class SearchbarComponent {
     activatedRoute.params.subscribe((params) => {
       if (params.searchTerm) this.searchTerm = params.searchTerm;
       else this.searchTerm = '';
-      // console.log("search"+this.searchTerm);
+      console.log("search"+this.searchTerm);
     })
   }
 
