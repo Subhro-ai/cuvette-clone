@@ -15,7 +15,7 @@ var app = (0, express_1.default)();
 app.use((0, cors_1.default)({
     credentials: true,
     origin: [
-        "https://66ec8d1f322d5d60ba131361--cuvette-clone-subhro.netlify.app/"
+        "https://66ec8d1f322d5d60ba131361--cuvette-clone-subhro.netlify.app"
     ]
 }));
 app.use("/api/jobs", jobs_router_1.default);
