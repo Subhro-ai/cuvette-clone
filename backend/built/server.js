@@ -14,7 +14,7 @@ dotenv_1.default.config();
 var app = (0, express_1.default)();
 app.use((0, cors_1.default)({
     credentials: true,
-    origin: ["http://localhost:4200"]
+    origin: ["https://cuvette-clone.onrender.com/"]
 }));
 app.use("/api/jobs", jobs_router_1.default);
 app.get("/api/jobs", function (req, res) {
